@@ -10,12 +10,14 @@ This Work Day Scheduler will allow you to organize and save your daily schedule.
 2. You can see that there are three colors in the scheduler that indicate present, future and past time.
   ![Image Caption](Work-Day-Scheduler\Develop\images\present-past-future-time.PNG)
 
-- red = current
-- green = past
-- gray = future
+- **red** = current
+- **green** = past
+- **gray** = future
 
 3. you can write in the designated text area and save your schedule.
   ![Image Caption](Work-Day-Scheduler\Develop\images\type-in-text-area.PNG)
+
+  [**Demo Video Link**](https://drive.google.com/file/d/13Zf8QlosRT61mauuXDU5m2UPGfNdlgUJ/view)
 
 ## Author
 
