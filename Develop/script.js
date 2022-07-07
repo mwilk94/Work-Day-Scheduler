@@ -15,12 +15,14 @@ function displayDate() {
 }
 displayDate();
 
-
-
+$(document).ready(function () {
+  
 function colorCode() {
 
+  
   for (var hour = 0; hour < totalHours; hour++) { 
-      var currentHour = hour + 9;
+  
+      var currentHour = hour + 7;
       
       timeTableElement = timeStarts.add(1,'h').format('h:mm a');
 
@@ -34,21 +36,36 @@ function colorCode() {
       }
 
       let div = 
-          `<div id="hour-${currentHour}" class="row time-block ${presentState}">
-              <div class="col-md-1 hour">${timeTableElement}</div>
-              <textarea class="col-md-10 description ${currentHour}"></textarea>
-              <button class="btn saveBtn col-md-1">
-                  <i class="fas fa-save"></i>
+          `<div id='hour-${currentHour}' class='row time-block ${presentState}'>
+              <div class='col-sm-1 hour'>${timeTableElement}</div>
+              <textarea class='col-sm-10 description ${currentHour}'></textarea>
+              <button class='btn saveBtn col-sm-1'>
+                  <i class='fas fa-save'></i>
               </button>
-          </div>`;
+           </div>`;
 
-      $(".container").append(div);
+      $('.container').append(div);
 
+      $(`#hour-${currentHour} .description`).val(localStorage.getItem(`hour-${currentHour}`))
+      
   }
-
-  loadSchedule();
 }
 
+// onclick event listener 
 colorCode();
-$('.saveBtn').on('click', saveSchedule);
+
+
+// save to local storage
+
+$('.saveBtn').on('click', function () {
+  var description = $(this).siblings('.description').val()
+  
+  var time = $(this).parent().attr('id')
+  console.log(description, time);
+
+  localStorage.setItem(time, description);
+});
+})
+
+
 
