@@ -3,9 +3,6 @@
 This Work Day Scheduler will allow you to organize and save your daily schedule.
 
 
-[**Deployed Link**] (https://github.com/mwilk94/Work-Day-Scheduler.git)
-
-
 ## Features
 1. When you access the work day scheduler, at the top of the screen you will see the current date and time.
   ![Image Caption](Work-Day-Scheduler\Develop\images\current-date-time.PNG)
